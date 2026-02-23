@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Rate Limiter Dashboard</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-mode">
+    <div class="background-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
+    <header>
+        <div class="container header-content">
+            <h1 data-aos="fade-down">RateLimiter<span>.io</span></h1>
+            <div class="theme-toggle" id="theme-toggle" data-aos="fade-left">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="request-section" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card glass">
+                <div class="input-group">
+                    <label for="endpoint-select">Test Endpoint</label>
+                    <select id="endpoint-select">
+                        <option value="/welcome">Home (/welcome)</option>
+                        <option value="/status">Status (/status)</option>
+                        <option value="/api-summary">API Summary (/api-summary)</option>
+                    </select>
+                </div>
+                <button id="send-request-btn" class="glow-on-hover">
+                    <span class="btn-text">Send Request</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </section>
+
+        <section id="result-container" class="result-section">
+            <!-- Results will be injected here -->
+        </section>
+    </main>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
